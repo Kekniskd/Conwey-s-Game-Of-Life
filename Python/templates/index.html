@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Conwey-s-Game-Of-Life</title>
-    <link rel="stylesheet" href="..\static\style.css">
-  </head>
-  <body>
-    <h1>Tesing templates in flask</h1>
-    <div>
-      {% block main %}
-        
-      {% endblock main %}
-    </div>
-  </body>
-</html>
+{% extends 'structure.html' %} {% block main %}
+<h1>Hello I'm in Index.html</h1>
+<form action="/" method="POST">
+  <input placeholder="Kedar" type="text" name="name">
+  <input type="password" name="passwd">
+  <input type="submit">
+</form>
+<h1>{{ message }}</h1>
+{% endblock main %}
